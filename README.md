@@ -9,6 +9,7 @@ This repository contains basic assembly language programs for the 8086 microproc
 | S.N.  | Problem Statement | File Link |
 |----|------------------|-----------|
 | 1  | Assembly level Program to toggle case in 8086 | [lab1.asm](lab1.asm) |
+| 2  | Assembly level Program to change into uppercase and print each character in newline in 8086|  |  
 
 ---
 

@@ -1,4 +1,4 @@
-# 8085 Microprocessor Basic Programs
+# 8086Microprocessor Basic Programs
 
 This repository contains basic assembly language programs for the 8086 microprocessor. These programs cover various fundamental operations and problem-solving techniques useful for learning and understanding 8086 assembly programming.
 

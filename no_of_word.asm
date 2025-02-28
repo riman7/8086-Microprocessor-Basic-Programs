@@ -36,7 +36,8 @@
         MOV CL, ACTLEN
         
         MOV BL, 01H; WORD COUNT
-        L1:
+        L1:        
+            MOV AL,[SI]
             CMP AL, 32;SPACE
             JNZ SKIP_COUNT
             INC BX
@@ -53,6 +54,9 @@
         MOV AH, 02h; FOR DISPLAY
         INT 21H  
         NEW_LINE
+        
+        mov ax, 4C00h
+        int 21h    
 
       
             

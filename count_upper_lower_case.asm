@@ -87,7 +87,7 @@
         int 21h
      main endp
      
-     print_number proc
+     print_number proc ;prints multiple digit number whose hex value is stored in AX register
 	        cmp ax, 0
 	        jne not_zero
 	        mov dl, '0'
@@ -99,9 +99,9 @@
 			mov cx, 0; count no of digit (for print loop)
 		
 		loop_push:
-			mov dx, 0
+			mov dx, 0 ; reset dl
 			mov bx, 10
-			div bx ;quotient ax, reminder dx
+			div bx ;ax/bx, quotient ax, reminder dx
 			add dl, '0'
 			push dx
 			inc cx

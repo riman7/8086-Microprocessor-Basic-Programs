@@ -1,4 +1,4 @@
-;Assembly level Program to change into uppercase and print each character in newline in 8086
+;Assembly level Program 8086 Microprocessor to read string and count number of words
 
 .model small
 .stack 64   

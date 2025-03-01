@@ -11,8 +11,8 @@ This repository contains basic assembly language programs for the 8086 microproc
 | 1  | Assembly level Program to toggle case in 8086 | [click_here](toggle_case.asm) |
 | 2  | Assembly level Program to change into uppercase and print each character in newline in clear screen in 8086| [click_here](each_letter_newline.asm) |  
 | 3  | Assembly level Program in 8086 to Clear Screen| [click_here](clear_screen.asm) |  
-| 4  | Assembly level Program in 8086 microprocessor to read string and count no of uppercase and lowercase| [click_here](count_upper_lower_case.asm) |  
-| 5  | Assembly level Program in 8086 Microprocessor to read a string and display it in next line with first letter in uppercase and rest in lowercase for each word| [click_here](first_letter_uppercase.asm) |  
+| 4  | Assembly level Program in 8086 microprocessor to read a string and count no of uppercase and lowercase| [click_here](count_upper_lower_case.asm) |  
+| 5  | Write an Assembly level Program in 8086 Microprocessor to read a string and display it in the next line with the first letter in uppercase and rest in lowercase for each word| [click_here](first_letter_uppercase.asm) |  
 | 6  | Assembly level Program in 8086 Microprocessor to display multiplication table of the number given by user in clear screen| [click_here](multiplication_table.asm) |  
 | 7  | Assembly level Program in 8086 Microprocessor to read string and count number of words| [click_here](no_of_word.asm) |  
 | 8  | Assembly level Program in 8086 Microprocessor to find the largest and smallest numbers of an array having 10 numbers. Display the found numbers in the clear screen| [click_here](smallest_and_largest.asm) | 

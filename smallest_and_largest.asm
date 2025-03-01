@@ -52,9 +52,16 @@
         loop l1
         
         ;clear screen
-        mov ah, 06h
-	mov dl, 0Ch    ; Form feed character
-	int 21h
+        MOV AX,0600H;REQ TO SCROLL
+	MOV BH,61H;BLUE ON BROWN FOR ATTRIBUT ON PIXEL 
+	MOV CX,0000H
+	MOV DX,1950H
+	INT 10h
+	;Cursor Reset
+	MOV AH, 02h      ; Function 02h: Set cursor position
+	MOV BH, 00h      ; Video page 0
+	MOV DX, 0000h    ; Row 0, column 0
+	INT 10h
         
         mov ah, 09h
         lea dx, smallest_msg

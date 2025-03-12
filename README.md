@@ -5,6 +5,7 @@ This repository contains basic assembly language programs for the 8086 microproc
 ---
 
 ## 📂 List of Programs  
+These are the solved problems of 8086 microprocessor asked in IOE examination.
 
 | S.N.  | Problem Statement | File Link |
 |----|------------------|-----------|
@@ -13,13 +14,90 @@ This repository contains basic assembly language programs for the 8086 microproc
 | 3  | Assembly level Program in 8086 to Clear Screen| [click_here](clear_screen.asm) |  
 | 4  | Assembly level Program in 8086 microprocessor to read a string and count no of uppercase and lowercase| [click_here](count_upper_lower_case.asm) |  
 | 5  | Write an Assembly level Program in 8086 Microprocessor to read a string and display it in the next line with the first letter in uppercase and rest in lowercase for each word| [click_here](first_letter_uppercase.asm) |  
-| 6  | Assembly level Program in 8086 Microprocessor to display multiplication table of the number given by user in clear screen| [click_here](multiplication_table.asm) |  
-| 7  | Assembly level Program in 8086 Microprocessor to read string and count number of words| [click_here](no_of_word.asm) |  
-| 8  | Assembly level Program in 8086 Microprocessor to find the largest and smallest numbers of an array having 10 numbers. Display the found numbers in the clear screen| [click_here](smallest_and_largest.asm) | 
+| 6  | Write an Assembly level Program in 8086 Microprocessor to display multiplication table of the number given by user in clear screen| [click_here](multiplication_table.asm) |  
+| 7  | write an Assembly level Program in 8086 Microprocessor to read string and count number of words| [click_here](no_of_word.asm) |  
+| 8  | Write an Assembly level Program in 8086 Microprocessor to find the largest and smallest numbers of an array having 10 numbers. Display the found numbers in the clear screen| [click_here](smallest_and_largest.asm) | 
 | 9  | Two tables contain 10 16-bit data. WAP in 8086 to generate third table which contains 1FFFh if the corresponding data in 1st table is less than that of 2nd table, else store 0000h| [click_here](table_problem.asm) |  
 | 10 | Assembly level Program in 8086 Microprocessor to read a string from user and display vowels and consonants seperately| [click_here](vowel_and_cons.asm) |  
 
+---
 
+## Basic Templetes
+This is the basic templete that almost every 8086 microprocessor program must have.
+```assembly
+.model small	; Defines the memory model. "small" means code and data fit within 64KB each.
+.stack 64	; Allocates a 64-byte stack for the program. 
+.data		; Section for declaring variables (if needed).
+
+.code		;code section
+    main proc far 
+        
+        MOV ax, @data
+        MOV ds, ax	; Initializes the data segment (only needed if data section exists).
+
+        ;your code here...
+     
+        mov ax, 4C00h	; DOS interrupt to return control to the OS.
+        int 21h    
+    main endp
+ end
+```
+
+### Loop
+
+```Assembly
+
+MOV CX, 0
+MOV CL, 05h  ;no of times loop runs 
+L1:
+ 
+     ;code here...
+     INC SI  ;only if SI is used in loop(used in most cases)
+
+LOOP L1
+            
+```
+
+### New Line
+```Assembly
+MOV AH, 02H        ; SELECT DOS FUNCTION 02H (DISPLAY CHARACTER)
+MOV DL, 0AH        ; ASCII CODE FOR LINE FEED.
+INT 21H            ; CALL DOS INTERRUPT TO PRINT THE CHARACTER
+
+MOV DL, 0DH        ; ASCII CODE FOR CARRIAGE RETURN (CR - MOVE TO BEGINNING OF LINE)
+INT 21H            ; CALL DOS INTERRUPT TO PRINT THE CHARACTER    
+```
+
+### String
+```Assembly
+.DATA  
+    MAXLEN DB 255         ; MAXIMUM BUFFER SIZE (255 CHARACTERS)  
+    ACTLEN DB ?           ; ACTUAL LENGTH OF INPUT (FILLED AFTER INPUT)  
+    INPUT DB 255 DUP('$') ; BUFFER TO STORE USER INPUT
+
+    MSG DB 'ENTER A STRING: $' ; PROMPT MESSAGE
+.CODE  
+    MAIN PROC FAR  
+        ; INITIALIZE DATA SEGMENT  
+        MOV AX, @DATA  
+        MOV DS, AX  
+
+        ; DISPLAY MESSAGE "ENTER A STRING: "  
+        LEA DX, MSG          ; Store address of MSG in DX
+        MOV AH, 09H          ; DOS FUNCTION 09H (PRINT STRING)  
+        INT 21H  
+
+        ; READ STRING FROM USER  
+        LEA DX, MAXLEN        ; SET BUFFER LOCATION  
+        MOV AH, 0AH           ; DOS FUNCTION 0AH (BUFFERED INPUT)  
+        INT 21H
+
+         ; DISPLAY ENTERED STRING  
+        LEA DX, INPUT         ; SKIP FIRST TWO BYTES (MAXLEN & ACTLEN)  
+        MOV AH, 09H           ; DOS FUNCTION 09H (PRINT STRING)  
+        INT 21H  
+
+```
 ---
 
 ## 🛠️ Contributions

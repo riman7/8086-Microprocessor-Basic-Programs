@@ -120,8 +120,8 @@ INT 21H            ; CALL DOS INTERRUPT TO PRINT THE CHARACTER
  end
 ```
 
-### Index
-Other than SI, BX and DI can also be used as index.
+### Index  
+- Other than SI, BX and DI can also be used as index.
 ---
 
 ## 🛠️ Contributions

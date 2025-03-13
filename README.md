@@ -5,7 +5,7 @@ This repository contains basic assembly language programs for the 8086 microproc
 ---
 
 ## 📂 List of Programs  
-These are the solved problems of 8086 microprocessor asked in IOE examination.
+These are the solved problems of the 8086 microprocessor asked in the IOE examination.
 
 | S.N.  | Problem Statement | File Link |
 |----|------------------|-----------|
@@ -14,11 +14,15 @@ These are the solved problems of 8086 microprocessor asked in IOE examination.
 | 3  | Assembly level Program in 8086 to Clear Screen| [click_here](clear_screen.asm) |  
 | 4  | Assembly level Program in 8086 microprocessor to read a string and count no of uppercase and lowercase| [click_here](count_upper_lower_case.asm) |  
 | 5  | Write an Assembly level Program in 8086 Microprocessor to read a string and display it in the next line with the first letter in uppercase and rest in lowercase for each word| [click_here](first_letter_uppercase.asm) |  
-| 6  | Write an Assembly level Program in 8086 Microprocessor to display multiplication table of the number given by user in clear screen| [click_here](multiplication_table.asm) |  
-| 7  | write an Assembly level Program in 8086 Microprocessor to read string and count number of words| [click_here](no_of_word.asm) |  
+| 6  | Write an Assembly level Program in 8086 Microprocessor to display the multiplication table of the number given by the user in clear screen| [click_here](multiplication_table.asm) |  
+| 7  | Write an Assembly level Program in 8086 Microprocessor to read string and count the number of words| [click_here](no_of_word.asm) |  
 | 8  | Write an Assembly level Program in 8086 Microprocessor to find the largest and smallest numbers of an array having 10 numbers. Display the found numbers in the clear screen| [click_here](smallest_and_largest.asm) | 
 | 9  | Two tables contain 10 16-bit data. WAP in 8086 to generate third table which contains 1FFFh if the corresponding data in 1st table is less than that of 2nd table, else store 0000h| [click_here](table_problem.asm) |  
 | 10 | Assembly level Program in 8086 Microprocessor to read a string from user and display vowels and consonants seperately| [click_here](vowel_and_cons.asm) |  
+| 11 | WAP in 8086 to read word from user and display all the alphabets in alternate case (first alphabet in uppercase, second alphabet in lower case , third alphabet in upper case and so on) in clear screen.| [click_here](alternate_case.asm) |  
+| 12 | WAP in 8086 to read string from user and  display only alphabetic characters from the string in clear screen.| [click_here](print_only_alphabet.asm) |  
+| 13 | WAP in 8086 which will input the username from the keyboard. If the user is "Tribhuvan University" it will display "valid user" else it will display "invalid user".| [click_here](valid_user.asm) |  
+| 14 | WAP in 8086 to input a string, count the word of this string whose length is greater than 5 and display this count in clear screen.| [click_here](word_with_len_5.asm) |  
 
 ---
 

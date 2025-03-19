@@ -132,4 +132,4 @@ INT 21H            ; CALL DOS INTERRUPT TO PRINT THE CHARACTER
 Contributions are welcome! If you want to add new programs or improve existing ones, feel free to submit a pull request.
 
 ---
-Happy Coding! 😊
+Happy Coding!🔥
